@@ -1,7 +1,7 @@
 @import url('fonts.css');
 
 /* Desktop */
-@media screen and (max-width: 2000px) and (min-width: 900px){
+@media screen and (max-width: 1920px) and (min-width: 900px){
     * {
         text-align: center;
         background-color: rgb(34, 34, 34);
@@ -10,41 +10,47 @@
     body{
         margin: 0px;
     }
-    /* Background image*/
-    #bg_img {
-        background-image: url(./images/lil1.png), url(./images/lil2.png);
-        background-repeat: no-repeat;
-        height: 100vh;
+
+    .container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: top center;
+    }
+    
+    .leftsidebar {
+        height: 100%;
         width: 100%;
-        background-attachment: fixed;
-        background-position: left, right;
-        background-size: contain;
+        order: 1;
+        flex-basis: auto;
     }
     
     h1 {
         font-family: "Header";
-        font-size: 60px;
+        font-size: 3em;
         color: black;
         text-transform: uppercase;
-        display: grid;
-        align-items: center;
         background-color: rgba(181, 181, 181, 0.6);
         background-blend-mode: lighten;
-        margin: 5px -150px;
-        padding: 0px !important;
-        height: 100px;
     }
     
     .about_me {
         font-family: "Regular";
         font-size: large;
         color: rgb(255, 255, 255);
-        position: center;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 60ch;
-        padding: 5px;
+        overflow: scroll;
+        height: 1080px;
+        overflow: scroll;
+        min-width: 40ch;
+        order: 2;
     } 
+    
+    #rightsidebar {
+        height: 100%;
+        width: 100%;
+        background-attachment: fixed;
+        order: 3;
+    }
 }
 
 /* Mobile */
@@ -85,7 +91,7 @@
         position: center;
         margin-left: auto;
         margin-right: auto;
-        width: 600px;
+        width: 45ch;
         padding: 5px;
     }
 }
