@@ -2,55 +2,68 @@
 
 /* Desktop */
 @media screen and (max-width: 1920px) and (min-width: 900px){
+    
     * {
         text-align: center;
         background-color: rgb(34, 34, 34);
     }
     
+    h2{
+        text-align: left;
+        font-size: 1.5rem;
+        font-family: "BoldItalic";
+        text-transform: uppercase;
+        text-align: left !important;
+    }
+    
     body{
-        margin: 0px;
+        margin: 0rem;
     }
 
     .container {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: top;
+        display: grid;
+        grid-template-columns: 44.875rem 30.25rem 44.875rem;
+        grid-template-rows: auto 1fr auto;
     }
     
-    .leftsidebar {
+    #leftsidebar {
         height: 100%;
         width: 100%;
-        order: 1;
-        flex-basis: auto;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
     }
     
-    h1 {
+    #site_name {
         font-family: "Header";
         font-size: 3em;
         color: black;
         text-transform: uppercase;
+        /* BG info*/
         background-color: rgba(181, 181, 181, 0.6);
         background-blend-mode: lighten;
+        background-size: 100%;
+        /* Grid elements*/
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
     }
-    
-    .about_me {
-        font-family: "Regular";
-        font-size: large;
-        color: rgb(255, 255, 255);
-        overflow: scroll;
-        height: 1080px;
-        overflow: scroll;
-        min-width: 40ch;
-        order: 2;
-    } 
-    
+
     #rightsidebar {
         height: 100%;
         width: 100%;
-        background-attachment: fixed;
-        order: 3;
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
     }
+    #about_me {
+        font-family: "Regular";
+        font-size: large;
+        color: rgb(255, 255, 255);
+        min-width: 40ch;
+        position: center;
+        margin: -1.875rem 1.25rem;
+        overflow: scroll;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    } 
 }
 
 /* Mobile */
@@ -72,7 +85,7 @@
     
     h1 {
         font-family: "Header";
-        font-size: 60px;
+        font-size: 3.75rem;
         color: black;
         text-transform: uppercase;
         display: grid;
@@ -81,7 +94,7 @@
         background-blend-mode: lighten;
         margin: 5px -150px;
         padding: 0px !important;
-        height: 100px;
+        height: 6.25rem;
     }
     
     .about_me {
@@ -91,7 +104,7 @@
         position: center;
         margin-left: auto;
         margin-right: auto;
-        width: 45ch;
-        padding: 5px;
+        width: 60ch;
+        padding: 0.313rem;
     }
 }
